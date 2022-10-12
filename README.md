@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Phase-1-Project - Cryptocurrency data
 
 Cosmo's Crypto is a website that displays the data of five of the most popular cryptocurrency.
@@ -24,3 +25,6 @@ Click the show all button to go back to original page of all the currencies disp
 -Javascript
 -JSON server
 
+=======
+# project
+>>>>>>> bb57d71 (first commit)
