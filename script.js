@@ -1,7 +1,8 @@
 window.addEventListener("DOMContentLoaded", () => {
   fetchCrypto()
-document.querySelector("#search").addEventListener("submit", search)
+  document.querySelector("#search").addEventListener("submit", search)
 })
+
 
 const crypto = document.querySelector("#container")
 function fetchCrypto() {
@@ -17,13 +18,14 @@ function fetchCrypto() {
     console.log(data)
 
     crypto.innerHTML = renderAll(data)
-
-})
+  })
+  })
 }
 
 function renderAll(crypto) {
   return crypto.map(c => renderSingle(c)).join("")
 }
+
 function renderSingle(crypto){
   return `<div class="crypto-card" id="${crypto.id}">
     <div class="crypto-frame">
@@ -34,15 +36,17 @@ function renderSingle(crypto){
   </div>`
 
 };
-
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 const allHearts = document.querySelectorAll('.like-glyph');
 
+
 const btn = document.querySelector(".crypto-like-button")
 
-function like(e) {
+
+
+  function like(e) {
   const heart = e.target;
   const EMPTY_HEART = '♡'
   const FULL_HEART = '♥'
@@ -59,4 +63,5 @@ function like(e) {
   for (const glyph of allHearts) {
   glyph.addEventListener("click", like)
   }
+
 
