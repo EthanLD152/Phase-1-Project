@@ -52,9 +52,10 @@ const btn = document.querySelector(".crypto-like-button")
   if(heart.className === "like-glyph"){
       heart.className = 'liked-heart'
   } else if (heart.className === "liked-heart"){
-    heart.innerText === EMPTY_HEART
     heart.className = "unliked-heart"
-  } else if (heart.className === "unliked-heart")
+  } else if (heart.className === "unliked-heart") {
+    heart.className = "liked-heart"
+  }
     }
 
   for (const glyph of allHearts) {
