@@ -1,4 +1,12 @@
-
+.crypto-card{
+  float: center;
+  top: 60%;
+  margin-left: 0%;
+  margin-top: 10%;
+  padding-top: 1%;
+  color: rgb(7, 5, 121);
+  background-color: rgba(0, 192, 250, 0.377);
+}
 
 #title {
   position: sticky  ;
