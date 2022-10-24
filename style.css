@@ -11,8 +11,7 @@
 #title {
   position: sticky  ;
   color: darkmagenta;
-  margin-left: 5%;
-  top: 0%;
+  margin-left: 30%;
  font-size: 500%;
 }
 
@@ -20,6 +19,7 @@ body {
   background-color: rgba(113, 118, 255, 0.186);
 
 }
+
 .liked-heart {
   background-color: red
 }
@@ -31,6 +31,13 @@ body {
   color: black;
   background-color:rgba(113, 118, 255, 0.186);
 }
+
+#first {
+ position: absolute;
+ top:29.8%;
+ margin-left: 52%
+}
+
 .center-text{
   color:rgb(0, 0, 0);
 
@@ -42,11 +49,14 @@ body {
 .crypto-like-button {
   display:none;
 }
+
 .crypto-frame {
   font-size: 200%;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 ul {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 120%;
   position: absolute;
   left: 50%;
@@ -61,4 +71,10 @@ padding: 10px;
   transform: translate(-50%, -50%);
 border: 2px solid #404041;
 padding: 10px;
+}
+h3 {
+  color:#000000;
+  margin-left: 3%;
+  font-size: 140%;
+  font-family: 'Times New Roman', Times, serif;
 }
