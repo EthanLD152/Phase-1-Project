@@ -26,3 +26,8 @@ function renderSingle(crypto){
   </div>`
 
 };
+
+const EMPTY_HEART = '♡'
+const FULL_HEART = '♥'
+
+const allHearts = document.querySelectorAll('.like-glyph');
