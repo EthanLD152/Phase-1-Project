@@ -31,3 +31,5 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 const allHearts = document.querySelectorAll('.like-glyph');
+
+const btn = document.querySelector(".crypto-like-button")
