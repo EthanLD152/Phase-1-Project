@@ -1,6 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   fetchCrypto()
-}
+document.querySelector("#search").addEventListener("submit", search)
+})
 
 function fetchCrypto() {
   fetch(`http://localhost:3000/crypto?q=${searchTerm}`)
