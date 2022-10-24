@@ -35,3 +35,12 @@ ul {
 transform: translate(70%, -60%);
 padding: 10px;
 }
+
+#search {
+  font-size: 160%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+border: 2px solid #404041;
+padding: 10px;
+}
