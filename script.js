@@ -8,6 +8,9 @@ function fetchCrypto() {
   const form = document.querySelector("#search");
   form.addEventListener('submit', (e) => {
     e.preventDefault()
+    const searchTerm = document.querySelector("#id").value
+    const likeBtn = document.querySelector('.crypto-like-button')
+    likeBtn.style.display = 'block'
   fetch(`http://localhost:3000/crypto?q=${searchTerm}`)
   .then(r => r.json())
   .then(data => {
