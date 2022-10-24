@@ -16,3 +16,13 @@ function fetchCrypto() {
 function renderAll(crypto) {
   return crypto.map(c => renderSingle(c)).join("")
 }
+function renderSingle(crypto){
+  return `<div class="crypto-card" id="${crypto.id}">
+    <div class="crypto-frame">
+      <h1 class="center-text">${crypto.name}</h1>
+      <h2>${crypto.price}</h2>
+      <h2>${crypto.dropRate}</h2>
+    </div>
+  </div>`
+
+};
