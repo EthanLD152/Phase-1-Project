@@ -45,3 +45,10 @@ function like(e) {
       heart.innerText = EMPTY_HEART;
       heart.className = 'unliked-heart';
     }
+    alert("Saved to Likes")
+  }
+
+  for (const glyph of allHearts) {
+  glyph.addEventListener("click", like)
+  }
+
