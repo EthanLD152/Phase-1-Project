@@ -10,6 +10,7 @@ function fetchCrypto() {
   form.addEventListener('submit', (e) => {
     e.preventDefault()
     const searchTerm = document.querySelector("#id").value
+    document.querySelector("#id").value = ""
     const likeBtn = document.querySelector('.crypto-like-button')
     likeBtn.style.display = 'block'
   fetch(`http://localhost:3000/crypto?q=${searchTerm}`)
@@ -30,8 +31,8 @@ function renderSingle(crypto){
   return `<div class="crypto-card" id="${crypto.id}">
     <div class="crypto-frame">
       <h1 class="center-text">${crypto.name}</h1>
-      <h2>${crypto.price}</h2>
-      <h2>${crypto.dropRate}</h2>
+      <h2>Price(usd) - $${crypto.price} </h2>
+      <h2>DropRate - ${crypto.dropRate} </h2>
     </div>
   </div>`
 
