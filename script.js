@@ -5,6 +5,9 @@ document.querySelector("#search").addEventListener("submit", search)
 
 const crypto = document.querySelector("#container")
 function fetchCrypto() {
+  const form = document.querySelector("#search");
+  form.addEventListener('submit', (e) => {
+    e.preventDefault()
   fetch(`http://localhost:3000/crypto?q=${searchTerm}`)
   .then(r => r.json())
   .then(data => {
