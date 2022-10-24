@@ -33,3 +33,15 @@ const FULL_HEART = '♥'
 const allHearts = document.querySelectorAll('.like-glyph');
 
 const btn = document.querySelector(".crypto-like-button")
+
+function like(e) {
+  const heart = e.target;
+  const EMPTY_HEART = '♡'
+  const FULL_HEART = '♥'
+    if(heart.innerText === EMPTY_HEART) {
+      heart.innerText === FULL_HEART
+      heart.className = 'liked-heart'
+    } else if (heart.innerText === FULL_HEART){
+      heart.innerText = EMPTY_HEART;
+      heart.className = 'unliked-heart';
+    }
