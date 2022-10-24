@@ -20,12 +20,19 @@ body {
   background-color: rgba(113, 118, 255, 0.186);
 
 }
+.center-text{
+  color:rgb(0, 0, 0);
 
+  width: 200%;
+}
 .hide {
   display: none;
 }
 .crypto-like-button {
   display:none;
+}
+.crypto-frame {
+  font-size: 200%;
 }
 
 ul {
