@@ -27,3 +27,11 @@ body {
 .crypto-like-button {
   display:none;
 }
+
+ul {
+  font-size: 120%;
+  position: absolute;
+  left: 50%;
+transform: translate(70%, -60%);
+padding: 10px;
+}
