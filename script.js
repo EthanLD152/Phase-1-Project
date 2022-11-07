@@ -39,7 +39,7 @@ function fetchCrypto() {
           cryptoContainer.append(h2, h3, newBtn)
 
         })
-      })
+    })
 }
 
 function handleLikeFunc(newBtn) {
@@ -49,7 +49,7 @@ function handleLikeFunc(newBtn) {
     } else if(newBtn.textContent === "like ♥") {
       newBtn.textContent = "like ♡"
     }
-     })
+  })
 }
 
 const div = document.createElement("div");
@@ -58,35 +58,29 @@ const div = document.createElement("div");
 
 
 function search(crypto) {
-
-
   const form = document.querySelector("#search");
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const searchTerm = document.querySelector("#id").value
-    document.querySelector("#id").value = ""
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      const searchTerm = document.querySelector("#id").value
+      document.querySelector("#id").value = ""
 
-
-  if(searchTerm === "ETHERIUM") {
-    cryptoContainer.style.display = "none"
-    console.log(crypto.name)
-    etheriumContainer.append(crypto)
-  } else if (searchTerm === "BITCOIN") {
-
-    etheriumContainer.style.display = "none"
-    bitcoinContainer.append(crypto)
-  } else if(searchTerm === "LITECOIN") {
-    litecoinContainer.append(crypto.name)
-  } else if(searchTerm === "DOGECOIN") {
-
-    dogecoinContainer.append(crypto.name)
-  } else if(searchTerm === "BINANCE") {
-    binanceContainer.append(crypto.name)
-  }
-})
-
-  }
+          if(searchTerm === "ETHERIUM") {
+          cryptoContainer.style.display = "none"
+          console.log(crypto.name)
+          etheriumContainer.append(crypto)
+        } else if (searchTerm === "BITCOIN") {
+          etheriumContainer.style.display = "none"
+          bitcoinContainer.append(crypto)
+        } else if(searchTerm === "LITECOIN") {
+          litecoinContainer.append(crypto.name)
+        } else if(searchTerm === "DOGECOIN") {
+          dogecoinContainer.append(crypto.name)
+        } else if(searchTerm === "BINANCE") {
+          binanceContainer.append(crypto.name)
+        }
+    })
+}
 
 
 
