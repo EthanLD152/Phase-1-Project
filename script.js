@@ -6,7 +6,11 @@ const cryptoId = document.querySelector("#cryptoId")
 const cryptoContainer = document.querySelector("#container")
 const cryptoPrice = document.querySelector("#price")
 const cryptoRate = document.querySelector("#rate")
-const searchContainer = document.querySelector("#searchContainer")
+const etheriumContainer = document.querySelector("#etheriumContainer")
+const bitcoinContainer = document.querySelector("#bitcoinContainer")
+const litecoinContainer = document.querySelector("#litecoinContainer")
+const dogecoinContainer = document.querySelector("#dogecoinContainer")
+const binanceContainer = document.querySelector("#binanceContainer")
 
 
 
@@ -14,6 +18,7 @@ function fetchCrypto() {
   fetch(`http://localhost:3000/crypto`)
     .then(r => r.json())
     .then(data => {
+        data.find(search)
         data.map(cryptoInfo => {
           const h1 = document.createElement("h1")
           h1.textContent = cryptoInfo.name
@@ -27,10 +32,12 @@ function fetchCrypto() {
           const newBtn = document.createElement("button")
           newBtn.textContent = "like ♡"
           handleLikeFunc(newBtn)
-          search(cryptoInfo, h1, h2, h3)
+
+
 
           cryptoContainer.append(h1)
           cryptoContainer.append(h2, h3, newBtn)
+
         })
       })
 }
@@ -49,8 +56,9 @@ const div = document.createElement("div");
 
 
 
-function search(cryptoInfo, h1, h2, h3) {
-const turnArray = Object.entries(cryptoInfo)
+
+function search(crypto) {
+
 
   const form = document.querySelector("#search");
 
@@ -59,29 +67,44 @@ const turnArray = Object.entries(cryptoInfo)
     const searchTerm = document.querySelector("#id").value
     document.querySelector("#id").value = ""
 
-    const find = turnArray.find((cryptoInfo) => {
-      console.log(cryptoInfo.name === searchTerm)
 
-    })
-  })
+  if(searchTerm === "ETHERIUM") {
+    cryptoContainer.style.display = "none"
+    console.log(crypto.name)
+    etheriumContainer.append(crypto)
+  } else if (searchTerm === "BITCOIN") {
 
+    etheriumContainer.style.display = "none"
+    bitcoinContainer.append(crypto)
+  } else if(searchTerm === "LITECOIN") {
+    litecoinContainer.append(crypto.name)
+  } else if(searchTerm === "DOGECOIN") {
 
+    dogecoinContainer.append(crypto.name)
+  } else if(searchTerm === "BINANCE") {
+    binanceContainer.append(crypto.name)
+  }
+})
 
   }
+
+
+
+
+
+
 
 // console.log(cryptoContainer.find(search))
 
 
 //.find method to grab cypto object i need
 
-//create div element for each crypto and append(prefer)
 
 //descriptive names
 
 //11 - 24 call bacl extracted to seperate function
 
 //spacing indentation
-//append to cryptoContainer/ use the variable to access dynamic values
 
 
 
