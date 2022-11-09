@@ -18,7 +18,7 @@ function fetchCrypto() {
   fetch(`http://localhost:3000/crypto`)
     .then(r => r.json())
     .then(data => {
-        data.find(search)
+
         data.map(cryptoInfo => {
           const h1 = document.createElement("h1")
           h1.textContent = cryptoInfo.name
@@ -32,7 +32,7 @@ function fetchCrypto() {
           const newBtn = document.createElement("button")
           newBtn.textContent = "like ♡"
           handleLikeFunc(newBtn)
-
+          search(cryptoInfo)
 
 
           cryptoContainer.append(h1)
@@ -57,29 +57,31 @@ const div = document.createElement("div");
 
 
 
-function search(crypto) {
+function search(cryptoInfo) {
   const form = document.querySelector("#search");
+  const crypto = Object.entries(cryptoInfo)
 
     form.addEventListener('submit', (e) => {
       e.preventDefault()
       const searchTerm = document.querySelector("#id").value
       document.querySelector("#id").value = ""
 
-          if(searchTerm === "ETHERIUM") {
-          cryptoContainer.style.display = "none"
-          console.log(crypto.name)
-          etheriumContainer.append(crypto)
-        } else if (searchTerm === "BITCOIN") {
-          etheriumContainer.style.display = "none"
-          bitcoinContainer.append(crypto)
-        } else if(searchTerm === "LITECOIN") {
-          litecoinContainer.append(crypto.name)
-        } else if(searchTerm === "DOGECOIN") {
-          dogecoinContainer.append(crypto.name)
-        } else if(searchTerm === "BINANCE") {
-          binanceContainer.append(crypto.name)
-        }
+      console.log(cryptoInfo)
+        crypto.forEach(cryptos => {
+          if(searchTerm === "etherium") {
+            etheriumContainer.append(cryptos[1])
+          }
+        })
+
+        crypto.forEach(cryptos => {
+          if(searchTerm === "bitcoin") {
+            bitcoinContainer.append(cryptos[3])
+          }
+        })
     })
+
+
+
 }
 
 
