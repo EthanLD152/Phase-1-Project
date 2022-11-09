@@ -68,6 +68,7 @@ function search(cryptoInfo) {
 
       console.log(cryptoInfo)
         crypto.forEach(cryptos => {
+          console.log(crypto)
           if(searchTerm === "etherium") {
             etheriumContainer.append(cryptos[1])
           }
