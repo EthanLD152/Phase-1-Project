@@ -67,6 +67,26 @@ function search(cryptoInfo) {
       document.querySelector("#id").value = ""
 
       console.log(cryptoInfo)
+      if(searchTerm === "ETHERIUM") {
+        console.log(cryptoInfo.name)
+        etheriumContainer.append(cryptoInfo.name)
+      } else if (searchTerm === "BITCOIN") {
+        etheriumContainer.style.display = 'none'
+        bitcoinContainer.append(cryptoInfo[1])
+        console.log(cryptoInfo)
+      }
+      if (searchTerm === "LITECOIN") {
+        litecoinContainer.append(cryptoInfo.name)
+        console.log(cryptoInfo.name)
+      }
+      if (searchTerm === "DOGECOIN") {
+        dogecoinContainer.append(cryptoInfo.name)
+        console.log(cryptoInfo.name)
+      }
+      if (searchTerm === "BINANCE") {
+        binanceContainer.append(cryptoInfo.name)
+        console.log(cryptoInfo.name)
+      }
         crypto.forEach(cryptos => {
           console.log(crypto)
           if(searchTerm === "etherium") {
