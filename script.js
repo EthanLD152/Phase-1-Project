@@ -6,19 +6,16 @@ const cryptoId = document.querySelector("#cryptoId")
 const cryptoContainer = document.querySelector("#container")
 const cryptoPrice = document.querySelector("#price")
 const cryptoRate = document.querySelector("#rate")
-const etheriumContainer = document.querySelector("#etheriumContainer")
-const bitcoinContainer = document.querySelector("#bitcoinContainer")
-const litecoinContainer = document.querySelector("#litecoinContainer")
-const dogecoinContainer = document.querySelector("#dogecoinContainer")
-const binanceContainer = document.querySelector("#binanceContainer")
+const searchResultContainer = document.querySelector("#searchResultContainer")
 
 
+let cryptos = []
 
 function fetchCrypto() {
   fetch(`http://localhost:3000/crypto`)
     .then(r => r.json())
     .then(data => {
-
+      cryptos = data;
         data.map(cryptoInfo => {
           const h1 = document.createElement("h1")
           h1.textContent = cryptoInfo.name
@@ -32,12 +29,9 @@ function fetchCrypto() {
           const newBtn = document.createElement("button")
           newBtn.textContent = "like ♡"
           handleLikeFunc(newBtn)
-          search(cryptoInfo)
-
 
           cryptoContainer.append(h1)
           cryptoContainer.append(h2, h3, newBtn)
-
         })
     })
 }
@@ -52,57 +46,38 @@ function handleLikeFunc(newBtn) {
   })
 }
 
-const div = document.createElement("div");
+const form = document.querySelector("#search");
+form.addEventListener('submit', handleSearch)
 
+function handleSearch(e) {
+  e.preventDefault();
+  cryptoContainer.style.display = 'none'
+  let userInput = document.getElementById("cryptoNameInput").value;
+  const foundCrypto = cryptos.find((crypto) => {
+    return crypto.name === userInput
+  })
 
+  const searchedName = document.createElement("h1")
+  searchedName.textContent = foundCrypto.name;
+  const searchedPrice = document.createElement("h2")
+  searchedPrice.textContent = foundCrypto.price;
+  const searchedDropRate = document.createElement("h3")
+  searchedDropRate.textContent = foundCrypto.dropRate;
 
+  searchResultContainer.append(searchedName, searchedPrice, searchedDropRate)
+  searchResultContainer.style.display = 'block'
+  showAllBtn.style.display = 'block'
+}
 
-function search(cryptoInfo) {
-  const form = document.querySelector("#search");
-  const crypto = Object.entries(cryptoInfo)
+const showAllBtn = document.querySelector(".show-all-btn");
+showAllBtn.addEventListener('click', handleShowAllBtn)
+showAllBtn.style.display = 'none'
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault()
-      const searchTerm = document.querySelector("#id").value
-      document.querySelector("#id").value = ""
-
-      console.log(cryptoInfo)
-      if(searchTerm === "ETHERIUM") {
-        console.log(cryptoInfo.name)
-        etheriumContainer.append(cryptoInfo.name)
-      } else if (searchTerm === "BITCOIN") {
-        etheriumContainer.style.display = 'none'
-        bitcoinContainer.append(cryptoInfo[1])
-        console.log(cryptoInfo)
-      }
-      if (searchTerm === "LITECOIN") {
-        litecoinContainer.append(cryptoInfo.name)
-        console.log(cryptoInfo.name)
-      }
-      if (searchTerm === "DOGECOIN") {
-        dogecoinContainer.append(cryptoInfo.name)
-        console.log(cryptoInfo.name)
-      }
-      if (searchTerm === "BINANCE") {
-        binanceContainer.append(cryptoInfo.name)
-        console.log(cryptoInfo.name)
-      }
-        crypto.forEach(cryptos => {
-          console.log(crypto)
-          if(searchTerm === "etherium") {
-            etheriumContainer.append(cryptos[1])
-          }
-        })
-
-        crypto.forEach(cryptos => {
-          if(searchTerm === "bitcoin") {
-            bitcoinContainer.append(cryptos[3])
-          }
-        })
-    })
-
-
-
+function handleShowAllBtn() {
+  showAllBtn.style.display = 'none'
+  searchResultContainer.style.display = 'none'
+  cryptoContainer.style.display = 'block'
+  searchResultContainer.textContent = "";
 }
 
 
@@ -111,17 +86,15 @@ function search(cryptoInfo) {
 
 
 
-// console.log(cryptoContainer.find(search))
 
 
-//.find method to grab cypto object i need
 
 
-//descriptive names
 
-//11 - 24 call bacl extracted to seperate function
 
-//spacing indentation
+
+
+
 
 
 

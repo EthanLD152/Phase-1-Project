@@ -5,16 +5,16 @@
   </head>
 
   <body>
-      <script src="script.js" async=""></script>
+
 
     <h1 id="title">
      Cosmo's Crypto
     </h1>
 <form id="search">
-<input id="id" type="text">
+<input id="cryptoNameInput" type="text">
 <input id="submit" class="button" type="submit">
 </form>
-<h3>Check the recent price's on popular cryptocurrency!</h3>
+<h3 id="subtitle">Check the recent price's on popular cryptocurrency!</h3>
 
 <ul> Names of Crypto available for search
   <li>ETHERIUM</li>
@@ -29,16 +29,13 @@
       <div id="rate"></div>
     </div>
 
-    <div id="etheriumContainer"></div>
-    <div id="bitcoinContainer"></div>
-    <div id="litecoinContainer"></div>
-    <div id="dogecoinContainer"></div>
-    <div id="binanceContainer"></div>
+    <div id="searchResultContainer"></div>
+
 <button class="crypto-like-button" id="1">Like
       <span class="like-glyph">♡</span></button><br><br>
 
+<button class="show-all-btn">Show All</button>
 
-
-
+  <script src="script.js" async=""></script>
 </body>
 </html>

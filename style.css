@@ -65,8 +65,10 @@ padding: 10px;
 }
 
 #search {
+
   font-size: 160%;
   position: absolute;
+
   left: 50%;
   transform: translate(-50%, -50%);
 border: 2px solid #404041;
@@ -74,7 +76,42 @@ padding: 10px;
 }
 h3 {
   color:#000000;
-  margin-left: 10%;
+  margin-left: 33%;
   font-size: 140%;
   font-family: 'Times New Roman', Times, serif;
+}
+h2 {
+  margin-left: 25%;;
+}
+#container {
+  position: absolute;
+  margin-left: 42%;
+  top: 35%;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 150%;
+  background-color: cadetblue;
+  width:
+}
+#price {
+  position: absolute;
+  top: 90%
+}
+
+#searchResultContainer {
+  position: absolute;
+  top: 35%;;
+  margin-left: 42%;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 150%;
+  background-color: cadetblue;
+}
+
+#subtitle {
+  display: flex;
+  margin-left: 10%;
+}
+
+searchedName {
+  position: absolute;
+  margin-left: 10%;
 }
