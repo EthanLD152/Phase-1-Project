@@ -36,9 +36,10 @@
 }
 
 #searchResultContainer {
-  position: absolute;
-  top: 35%;;
-  margin-left: 42%;
+ position: absolute;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  top: 50%;
   font-family:'Times New Roman', Times, serif;
   font-size: 150%;
   background-color: cadetblue;
@@ -119,7 +120,12 @@ h2 {
   top: 90%
 }
 
-
+.show-all-btn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 10px;
+}
 
 
 
