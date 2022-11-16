@@ -1,6 +1,5 @@
-window.addEventListener("DOMContentLoaded", () => {
-  fetchCrypto()
-})
+fetchCrypto()
+
 
 const cryptoId = document.querySelector("#cryptoId")
 const cryptoContainer = document.querySelector("#container")
@@ -80,6 +79,10 @@ function handleShowAllBtn() {
   searchResultContainer.textContent = "";
 }
 
+let userInputField = document.getElementById("cryptoNameInput")
+userInputField.addEventListener('focus', (event) => {
+  event.target.style.background = "cadetblue"
+})
 
 
 
