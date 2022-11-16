@@ -1,4 +1,4 @@
-# Phase-1-Project
+# Phase-1-Project - Cryptocurrency data
 
 Cosmo's Crypto is a website that displays the data of five of the most popular cryptocurrency.
 
