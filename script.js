@@ -1,6 +1,5 @@
 fetchCrypto()
 
-
 const cryptoId = document.querySelector("#cryptoId")
 const cryptoContainer = document.querySelector("#container")
 const cryptoPrice = document.querySelector("#price")
@@ -8,7 +7,7 @@ const cryptoRate = document.querySelector("#rate")
 const searchResultContainer = document.querySelector("#searchResultContainer")
 
 
-let cryptos = []
+let cryptos = [];
 
 function fetchCrypto() {
   fetch(`http://localhost:3000/crypto`)
