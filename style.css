@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4e91edf (refactored)
+
 #title {
   position: sticky;
   color: darkmagenta;
   margin-left: 35%;
   font-size: 500%;
   transform: translate(-50%, -50%);
-<<<<<<< HEAD
 }
 
 #search {
@@ -118,6 +114,7 @@ h3 {
 
 h2 {
   margin-left: 25%;;
+
 }
 
 #price {
@@ -133,139 +130,7 @@ h2 {
 }
 
 
-
-=======
-h1 {
-  font-size: 100px;
-  color:cornflowerblue;
+#ok {
   position: absolute;
-  margin-left: 25%;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-=======
->>>>>>> 4e91edf (refactored)
-}
-
-#search {
-  font-size: 160%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 2px solid #404041;
-  padding: 10px;
-}
-
-.crypto-card{
-  float: center;
-  top: 60%;
-  margin-left: 0%;
-  margin-top: 10%;
-  padding-top: 1%;
-  color: rgb(7, 5, 121);
-  background-color: rgba(0, 192, 250, 0.377);
-}
-
-#container {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -25%);
-  top: 70%;
-  font-family:'Times New Roman', Times, serif;
-  font-size: 150%;
-  background-color: cadetblue;
-}
-
-#searchResultContainer {
- position: absolute;
-  left: 50%;
-  transform: translate(-50%, -25%);
-  top: 50%;
-  font-family:'Times New Roman', Times, serif;
-  font-size: 150%;
-  background-color: cadetblue;
-}
-
-#subtitle {
-  font-size: 180%;
-  position: absolute;
-  left: 17%;
-  top: 8%;
-  transform: translate(-50%, -25%);
-}
-<<<<<<< HEAD
->>>>>>> 2d9a8ed (commit message)
-=======
-
-ul {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 180%;
-  position: absolute;
-  left: -5%;
-  top: 28%;
-  transform: translate(70%, -60%);
-  padding: 10px;
-}
-
-body {
-  background-color: rgba(113, 118, 255, 0.186);
-}
-
-.liked-heart {
-  background-color: red
-}
-
-.like-glyph {
-  cursor: pointer;
-}
-
-.unliked-heart {
-  color: black;
-  background-color:rgba(113, 118, 255, 0.186);
-}
-
-#first {
- position: absolute;
- top:29.8%;
- margin-left: 52%
-}
-
-.center-text{
   color:rgb(0, 0, 0);
-  width: 200%;
 }
-
-.hide {
-  display: none;
-}
-
-.crypto-like-button {
-  display:none;
-}
-
-.crypto-frame {
-  font-size: 200%;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-h3 {
-  color:#000000;
-  margin-left: 33%;
-  font-size: 140%;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-h2 {
-  margin-left: 25%;;
-}
-
-#price {
-  position: absolute;
-  top: 90%
-}
-
-.show-all-btn {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 100%);
-  padding: 10px;
-}
->>>>>>> 4e91edf (refactored)
