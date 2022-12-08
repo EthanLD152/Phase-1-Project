@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #title {
   position: sticky;
   color: darkmagenta;
@@ -129,3 +130,34 @@ h2 {
 
 
 
+=======
+h1 {
+  font-size: 100px;
+  color:cornflowerblue;
+  position: absolute;
+  margin-left: 25%;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h3 {
+  position: absolute;
+  top: 172px;
+  margin-left: 40%;
+  color: rgb(100, 100, 100);
+}
+body {
+  background-color: rgb(252, 219, 177);
+}
+
+.data-1 {
+  position: absolute;
+  margin-left: 40%;
+  top: 38%;
+
+}
+
+.data-2 {
+  position:absolute;
+  margin-left: 40%;
+  top: 65%
+}
+>>>>>>> 2d9a8ed (commit message)

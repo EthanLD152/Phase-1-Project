@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fetchCrypto()
 
 const cryptoId = document.querySelector("#cryptoId")
@@ -103,4 +104,22 @@ userInputField.addEventListener('focus', (event) => {
 
 
 
+=======
+
+
+ function fetchData() {
+fetch("https://api.coingecko.com/api/v3/exchange_rates")
+.then(response => response.json())
+.then(data => {
+  for (let cryptoInfo of data) {
+    console.log(cryptoInfo);
+    const cryptoInfoEl = document.getElementById('crypto-info')
+    const crypto = document.createElement('p');
+    crypto.innerText = data;
+    // cryptoInfoEl.append(crypto);
+  }
+})
+}
+fetchData()
+>>>>>>> 2d9a8ed (commit message)
 
