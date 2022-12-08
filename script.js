@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 fetchCrypto()
 
 const cryptoId = document.querySelector("#cryptoId")
@@ -10,27 +10,43 @@ const searchResultContainer = document.querySelector("#searchResultContainer")
 
 let cryptos = [];
 
+function displayCrypto(crypto) {
+  const h1 = document.createElement("h1")
+  h1.textContent = crypto.name
+
+  const h2 = document.createElement("h2")
+  h2.textContent = crypto.price
+
+  const h3 = document.createElement("h3")
+  h3.textContent = crypto.dropRate
+
+  handleMainDisplay(h1,h2,h3)
+}
+
+function handleMainDisplay(h1, h2, h3) {
+  cryptoContainer.append(h1, h2, h3)
+}
+
+function handleSearchDisplay(crypto) {
+  cryptoContainer.textContent = ""
+  displayCrypto(crypto)
+}
+
 function fetchCrypto() {
   fetch(`http://localhost:3000/crypto`)
     .then(r => r.json())
     .then(data => {
       cryptos = data;
+      console.log(data)
         data.map(cryptoInfo => {
-          const h1 = document.createElement("h1")
-          h1.textContent = cryptoInfo.name
 
-          const h2 = document.createElement("h2")
-          h2.textContent = cryptoInfo.price
-
-          const h3 = document.createElement("h3")
-          h3.textContent = cryptoInfo.dropRate
+          displayCrypto(cryptoInfo)
 
           const newBtn = document.createElement("button")
           newBtn.textContent = "like ♡"
           handleLikeFunc(newBtn)
 
-          cryptoContainer.append(h1)
-          cryptoContainer.append(h2, h3, newBtn)
+          cryptoContainer.append(newBtn)
         })
     })
 }
@@ -50,21 +66,13 @@ form.addEventListener('submit', handleSearch)
 
 function handleSearch(e) {
   e.preventDefault();
-  cryptoContainer.style.display = 'none'
+
   let userInput = document.getElementById("cryptoNameInput").value;
   const foundCrypto = cryptos.find((crypto) => {
     return crypto.name === userInput
   })
+  handleSearchDisplay(foundCrypto)
 
-  const searchedName = document.createElement("h1")
-  searchedName.textContent = foundCrypto.name;
-  const searchedPrice = document.createElement("h2")
-  searchedPrice.textContent = foundCrypto.price;
-  const searchedDropRate = document.createElement("h3")
-  searchedDropRate.textContent = foundCrypto.dropRate;
-
-  searchResultContainer.append(searchedName, searchedPrice, searchedDropRate)
-  searchResultContainer.style.display = 'block'
   showAllBtn.style.display = 'block'
 }
 
@@ -74,9 +82,7 @@ showAllBtn.style.display = 'none'
 
 function handleShowAllBtn() {
   showAllBtn.style.display = 'none'
-  searchResultContainer.style.display = 'none'
-  cryptoContainer.style.display = 'block'
-  searchResultContainer.textContent = "";
+  cryptoContainer.textContent = fetchCrypto()
 }
 
 let userInputField = document.getElementById("cryptoNameInput")
@@ -100,26 +106,4 @@ userInputField.addEventListener('focus', (event) => {
 
 
 
-
-
-
-
-=======
-
-
- function fetchData() {
-fetch("https://api.coingecko.com/api/v3/exchange_rates")
-.then(response => response.json())
-.then(data => {
-  for (let cryptoInfo of data) {
-    console.log(cryptoInfo);
-    const cryptoInfoEl = document.getElementById('crypto-info')
-    const crypto = document.createElement('p');
-    crypto.innerText = data;
-    // cryptoInfoEl.append(crypto);
-  }
-})
-}
-fetchData()
->>>>>>> 2d9a8ed (commit message)
 
